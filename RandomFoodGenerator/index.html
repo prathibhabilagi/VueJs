@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css"/> 
+</head>
+<body>
+    <div id="app">
+        <img v-bind:src="picture" :alt="`${name}`"/>
+        <h1>{{name}}</h1>
+        <h3>Category: {{category}}</h3>
+        <h3>Area: {{area}}</h3>
+        <h3>Youtube Link: <a :href="ytLink">{{name}} Youtube</a></h3>
+        <h3>Blog Link: <a :href="blogLink">{{name}} Blog</a></h3>
+        <button v-on:click="getDish()">Get Random Dish</button>
+    </div>  
+
+    <script src="https://unpkg.com/vue@3.0.5"></script>
+    <script src="app.js"></script>
+</body>
+</html>
